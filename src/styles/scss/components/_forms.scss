@@ -1,16 +1,28 @@
+.grid-form-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    @include rwd(l){
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .form-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 3rem;
-    & input {
-        margin: .6rem;
+    // grid-column: span 1; // Asegura que cada elemento ocupe una sola columna
+    // grid-row: auto; // Coloca cada elemento en la siguiente fila disponible
+    & input, select {
+        width: 100%;
         padding: .5em;
-        border-radius: .9rem;
-        border: none;
+        border-radius: .5rem;
+        border: 3px solid $border-color;
         transition: filter .3s;
     }
+    
     & input:focus {
         filter: drop-shadow(0 0 .1rem $border-color);
     }
