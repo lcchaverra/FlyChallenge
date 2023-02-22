@@ -1,0 +1,29 @@
+.main-footer {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    margin-top: auto;
+    background-color: var(--primary);
+    height: $header-height;
+    color: lighten($text-color,90);
+    justify-content: center;
+    align-items: center;
+    & i {
+        font-size: 1.3em;
+        margin-right: 1.2rem;
+        color: lighten($text-color,90);
+        transition: font-size .3s;
+        &:hover {
+            font-size: 2em;
+        }
+    }
+    & p,span {
+        padding-right: 1rem;
+    }
+    & p{
+        display: none;
+        @include rwd(l){
+            display: flex;
+        }
+    }
+}

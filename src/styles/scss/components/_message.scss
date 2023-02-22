@@ -1,0 +1,16 @@
+.message{
+    border: 3px solid $border-color;
+    border-radius: 1rem;
+    width: 70%;
+    text-align: center;
+    padding: 1em;
+    overflow: auto ;
+    animation: translucid 10s alternate infinite; 
+}
+
+@keyframes translucid {
+    to {
+        color: var(--bg-color2);
+        background-color: $border-color;
+    }
+}

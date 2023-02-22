@@ -1,0 +1,17 @@
+.button {
+    text-align: center;
+    padding: 1em; 
+    margin-bottom: 1rem;
+    border-radius: .3em;
+    border: none;
+    background-color: var(--primary);
+    color: var(--button-color);
+    will-change: filter background-color;
+    transition: filter .3s, background-color .3s;
+    &:hover{
+        // transform: scale(1.1);
+        color: var(--letter-color);
+        background-color: var(--bg-color);
+        filter: drop-shadow(0 0 .2em $border-color);
+    }
+}

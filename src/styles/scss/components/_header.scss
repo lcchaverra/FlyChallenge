@@ -1,0 +1,9 @@
+.main-header {
+    overflow: hidden;
+    display: flex;
+    height: $header-height;
+    width: 100%;
+    background-color: var(--primary);
+    // background-color: var(--bg-color2);
+    justify-content: space-between;
+}

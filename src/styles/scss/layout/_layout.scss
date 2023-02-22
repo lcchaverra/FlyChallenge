@@ -1,0 +1,30 @@
+.title {
+    display: flex;
+    padding-top: 1rem;
+    justify-content: center;
+    color: var(--letter-color);
+}
+
+.main-container {
+    height: 100%;
+    width: calc(100%-4rem);
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--letter-color);
+    font-size: var(--h3-font-size);
+    @include rwd(l) {
+        width: 100%;
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+.section-divider {
+    width: 100%;
+    height: .2em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-image: linear-gradient(to right, transparent 3%,$border-color 60%,transparent);
+    background-repeat: no-repeat;
+}

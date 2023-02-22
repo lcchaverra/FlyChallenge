@@ -1,0 +1,52 @@
+// maximo del contenido
+$max-width:1200px;
+// tamaño del header
+$header-height: 4rem;
+// color para bordes
+$border-color : #CCC;
+// color para el texto
+$text-color: #53575A;
+// Mapa de breakpoints para el responsive
+$breakpoints: (
+    l:960px
+);
+
+:root {
+    // Colores
+    --primary: #F44459;
+    --button-color: rgb(255, 255, 255);
+    --letter-color: #53575A;
+    --bg-color:#FAFDFF;
+    background-color: var(--bg-color2);
+    // Z-index - Variables de apilamientos
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+
+    // Tipografia
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --body-font-size: .9rem;
+    --small-font-size: .75rem;
+    
+    @include rwd(l) {
+        --h1-font-size: 2.5rem;
+        --h2-font-size: 2rem;
+        --h3-font-size: 1.5rem;
+        --body-font-size: 1rem;
+        --small-font-size: .8rem;
+    }
+}
+
+/* Media Query para adaptar el color al mismo del sistema */
+@media (prefers-color-scheme :dark) {
+    $border-color: rgba(0, 0, 0, 0.795);
+    :root {
+        --letter-color: #FFFF;
+        --bg-color2  : #23272E;
+        --bg-color    : #1F2937;
+    } 
+}

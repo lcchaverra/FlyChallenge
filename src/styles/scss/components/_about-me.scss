@@ -1,0 +1,25 @@
+.about-me{
+    margin-top: 0;
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1;
+    gap: 2rem;
+    grid-auto-flow: column;
+    & img {
+        height: 16rem;
+        order: 1;
+        border-radius: 50%;
+        box-shadow: 1px 1px 5px $border-color;
+        filter:grayscale(1);
+        transition: filter .2s;
+    }
+    & img:hover {
+        filter: none;
+    }
+    @include rwd(l) {
+        grid-template-columns: repeat(2,70% 30%);
+    }
+}

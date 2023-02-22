@@ -1,0 +1,70 @@
+.main-menu {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    @include rwd(l){
+        display: flex;
+        }
+}
+
+.main-menu__item {
+    padding: 1rem;
+    transition: transform .3s;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+.main-menu__link {
+    color: lighten($text-color,90);
+    margin-left: 1rem;
+}
+
+.main-logo img{
+    margin-left: 2rem;
+    margin-top: .3em;
+    display: flex;
+    height: 3.5rem;
+    transition: transform .3s;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+.main-nav {
+    position: fixed;
+    height: calc(100vh - #{$header-height});
+    width: 80vw;
+    background-color: var(--primary);
+    top: $header-height;
+    right: -80vw;
+    transition: all .3s;
+    z-index: var(--z-fixed);
+    
+    @include rwd (l) {
+        position: static;
+        background: transparent;
+        padding-top: 0;
+        height: auto;
+        width: auto;
+    }
+
+    &.show {
+        padding-top: 2rem;
+        right: 0;
+    }
+}
+
+.main-menu-toggle {
+    @include rwd(l) {
+        display: none;
+    }
+    margin-top: 1rem;
+    margin-right: 1rem;
+    width: 2.1rem;
+    height: 1.4rem;
+    $color: lighten($border-color,31);
+    background: linear-gradient($color 20%, transparent 20%, transparent 40%, $color 40%, $color 60%, transparent 60%, transparent 80%, $color 80%);
+    cursor: pointer;
+}

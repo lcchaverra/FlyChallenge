@@ -1,0 +1,17 @@
+@mixin rwd($breakpoint) {
+        @if map-has-key($breakpoints,$breakpoint){
+            @media screen and (min-width: map-get($breakpoints,$breakpoint)) {
+                @content;
+            }
+        }
+    @else {
+        @if type-of($breakpoint) == number and unit($breakpoint) == 'rem' or unit($breakpoint) == 'em' or unit($breakpoint) == 'px' or unit($breakpoint) == '%' {
+            @media screen and (min-width: $breakpoint) {
+                @content;
+            }  
+        }
+        @else {
+            @error 'Tipo de Dato no permitido';
+        }
+    }
+}

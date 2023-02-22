@@ -1,0 +1,22 @@
+.SkillsGrid {
+    margin: 1rem 5rem;
+    display: grid;
+    padding: 2rem;
+    gap: 2em;
+    grid-template-columns: repeat(1, 1fr);
+    @include rwd(580px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include rwd(l){
+        grid-template-columns: repeat(6, 1fr);
+    }
+    & img {
+        width: 100%;
+        will-change: transform, filter;
+        transition: transform .3s, filter .3s;
+    }
+    & img:hover{
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 1rem var(--primary));
+    }
+}

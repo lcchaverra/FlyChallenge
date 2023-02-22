@@ -1,0 +1,16 @@
+.i-am {
+    & .empty {
+        width: 30%;
+        border-radius: none;
+        box-shadow: none;
+        filter: none;
+    }
+    & .empty-2 {
+        width: 30%;
+        order: 1;
+        border-radius: 0;
+        box-shadow: none;
+        filter: none;
+    }
+}
+

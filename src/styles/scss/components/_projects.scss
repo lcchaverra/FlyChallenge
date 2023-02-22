@@ -1,0 +1,40 @@
+.projects-grid-container {
+    display: grid;
+    grid-template-columns: repeat(1);
+    gap: 2em;
+    padding: 2em;
+    @include rwd(600px){
+        grid-template-columns: repeat(2,1fr);
+    }
+    @include rwd(l){
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.project-card {
+    background-color: var(--bg-color);
+    // border: .1rem solid var(--letter-color);
+    box-shadow: 1px 1px 2px $border-color;
+    border-radius: .7rem;
+    & .card-banner {
+        border-radius: .7rem;
+    }
+    will-change: transform;
+    transition: transform .3s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+.card-content {
+    color: var(--letter-color);
+    display: flex;
+    flex-direction: column;
+    padding: .5em;
+    max-height: 220px;
+    & .title{
+        padding: 0;
+    }
+    & .description{
+        overflow: hidden;
+    }
+}
