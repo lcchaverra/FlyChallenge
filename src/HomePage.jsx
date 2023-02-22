@@ -1,15 +1,18 @@
 import React from 'react'
-// import Header from './components/Header'
-// import MainBanner from './components/MainBanner'
-// import MainFooter from './components/Footer'
+import Header from './components/Header'
+import MainBanner from './components/MainBanner'
+import Group from './components/Group'
+import Challenge from './components/Challenge'
+import MainFooter from './components/Footer'
 
 const HomePage = () => {
     return(
         <>
-        <h2>asdasds</h2>
-        {/* <Header />
+        <Header />
         <MainBanner/>
-        <MainFooter/>  */}
+        <Group/>
+        <Challenge/>
+        <MainFooter/>  
         </>
     )
 }

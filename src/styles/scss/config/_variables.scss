@@ -13,7 +13,7 @@ $breakpoints: (
 
 :root {
     // Colores
-    --primary: #F44459;
+    --primary: #4453f4;
     --button-color: rgb(255, 255, 255);
     --letter-color: #53575A;
     --bg-color:#FAFDFF;
@@ -42,11 +42,11 @@ $breakpoints: (
 }
 
 /* Media Query para adaptar el color al mismo del sistema */
-@media (prefers-color-scheme :dark) {
-    $border-color: rgba(0, 0, 0, 0.795);
-    :root {
-        --letter-color: #FFFF;
-        --bg-color2  : #23272E;
-        --bg-color    : #1F2937;
-    } 
-}
+// @media (prefers-color-scheme :dark) {
+//     $border-color: rgba(0, 0, 0, 0.795);
+//     :root {
+//         --letter-color: #FFFF;
+//         --bg-color2  : #23272E;
+//         --bg-color    : #1F2937;
+//     } 
+// }

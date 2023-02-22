@@ -20,6 +20,19 @@
     }
 }
 
+.main-container-2 {
+    height: 100%;
+    width: calc(100%-4rem);
+    padding: 1rem 2rem;
+    color: var(--letter-color);
+    font-size: var(--h3-font-size);
+    @include rwd(l) {
+        width: 100%;
+        padding: 1.1rem 15rem;
+    }
+}
+
+
 .section-divider {
     width: 100%;
     height: .2em;

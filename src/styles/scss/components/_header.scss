@@ -4,6 +4,6 @@
     height: $header-height;
     width: 100%;
     background-color: var(--primary);
-    // background-color: var(--bg-color2);
     justify-content: space-between;
+    box-shadow: 2px 2px 5px $border-color;
 }
