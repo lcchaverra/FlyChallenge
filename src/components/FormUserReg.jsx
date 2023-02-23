@@ -20,31 +20,38 @@ const FormUserReg = () => {
                     </div>
 
                     <div className="form-item">
-                        <label  >Cedula:< input  pattern='[0-9]+ ' placeholder='Cedula'  ></input></label>
+                        <label >Cedula:</label>
+                        < input pattern='[0-9]+ ' placeholder='Cedula'></input>
                     </div>
 
                     <div className="form-item">
-                        <label  >Nombres:< input pattern='[A-Z, a-z,ñ]+ ' placeholder='Nombres'  ></input></label>
+                        <label>Nombres:</label>
+                        <input pattern='[A-Z, a-z,ñ]+ ' placeholder='Nombres'></input>
                     </div>
 
                     <div className="form-item">
-                        <label  >Apellidos:< input pattern='[A-Z,a-z,ñ]+ ' placeholder='Apellidos'></input></label>
+                        <label>Apellidos:</label>
+                        <input pattern='[A-Z,a-z,ñ]+ ' placeholder='Apellidos'></input>
                     </div>
 
                     <div className="form-item">
-                        <label  >Fecha:< input pattern='[0-9,/,-]+ ' placeholder='Fecha' type="date"></input></label>
+                        <label>Fecha:</label>
+                        <input pattern='[0-9,/,-]+ ' placeholder='Fecha' type="date"></input>
                     </div>
 
                     <div className="form-item">
-                        <label  >Profesion:< input pattern='[A-Z,a-z,ñ]+ ' placeholder='Profesion'  ></input></label>
+                        <label>Profesion:</label>
+                        <input pattern='[A-Z,a-z,ñ]+ ' placeholder='Profesion'></input>
                     </div>
 
                     <div className="form-item">
-                        <label  >Aspiracion salarial:< input placeholder='Aspiracion salarial'  type="text"></input></label>
+                        <label>Aspiracion salarial:</label>
+                        <input placeholder='Aspiracion salarial' type="text"></input>
                     </div>
 
                     <div className="form-item">
-                        <label  >Correo:< input placeholder='Correo'  type="email"></input></label>
+                        <label>Correo:</label>
+                        <input placeholder='Correo' type="email"></input>
                     </div>
 
                 </div>

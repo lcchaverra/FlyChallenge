@@ -9,32 +9,32 @@ const FormVacaOfert = () => {
                 <div className="grid-form-container">
 
                     <div className="form-item">
-                        <label htmlFor="name">Codigo</label>
-                        <input type="text" id="name" />
+                        <label htmlFor="codigo">Codigo</label>
+                        <input type="text" id="codigo" />
                     </div>
 
                     <div className="form-item">
-                        <label htmlFor="name">Codigo</label>
-                        <input type="text" id="name" />
+                        <label htmlFor="cargo">Cargo</label>
+                        <input type="text" id="cargo" />
                     </div>
 
                     <div className="form-item">
-                        <label htmlFor="email">Correo</label>
-                        <input type="email" id="email" />
+                        <label htmlFor="descripcion">Descripcion</label>
+                        <input type="text" id="descripcion" />
                     </div>
 
                     <div className="form-item">
-                        <label htmlFor="name">Nombre</label>
-                        <input type="text" id="name" />
+                        <label htmlFor="empresa">Empresa</label>
+                        <input type="text" id="empresa" />
                     </div>
                     <div className="form-item">
-                        <label htmlFor="email">Correo</label>
-                        <input type="email" id="email" />
+                        <label htmlFor="salario">Salario</label>
+                        <input type="text" id="salario" />
                     </div>
 
                 </div>
                     <div className="form-item">
-                        <button className="button" type="submit">Enviar</button>
+                        <button className="button" type="submit">Registrar Vacante</button>
                     </div>
                 </form>
                     <div className="section-divider"></div>

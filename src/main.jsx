@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider,} from "react-router-dom";
 import HomePage from './HomePage'
 import RegVaPage from './RegVaPage';
 import RegUserPage from './RegUserPage';
+import ModuleAspi from './ModuleAspi';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/RegUserPage",
     element: <RegUserPage/>
+  },
+  {
+    path: "/ModuleAspi",
+    element: <ModuleAspi/>
   },
 ]);
 
