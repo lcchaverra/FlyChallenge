@@ -161,6 +161,11 @@ h3 {
     .main-menu-toggle {
       display: none; } }
 
+.Button-Icon {
+  color: red;
+  background-color: transparent;
+  border: none; }
+
 .main-section-banner {
   width: 100%;
   height: 15rem;
@@ -227,6 +232,13 @@ h3 {
     padding: 0; }
   .card-content .description {
     overflow: hidden; }
+
+.img-hover {
+  will-change: tranform, filter;
+  transition: transform .3s, filter .3s; }
+  .img-hover:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 1rem var(--primary)); }
 
 .button {
   text-align: center;

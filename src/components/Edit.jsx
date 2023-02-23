@@ -1,65 +1,77 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
-import {collection, addDoc } from 'firebase/firestore'
+import { useNavigate, useParams } from 'react-router-dom'
+import { collection ,getDoc, updateDoc, doc} from 'firebase/firestore'
 import { db } from '../firebaseConfig/firebase';
 import { async } from '@firebase/util'
 
-const FormUserReg = () => {
-    // Configurar Hooks
-    const [tipoDocumento,setTipoDocumento]= useState([])
-    const [documento,setDocumento]= useState([])
-    const [nombres,setNombres]= useState([])
-    const [apellidos, setApellidos]= useState([])
-    const [fecha,setFecha]= useState([])
-    const [profesion, setProfesion]= useState([])
-    const [aspiracion,setAspiracion]= useState([])
-    const [correo,setCorreo]= useState([])
+const Edit = () => {
 
-        // const [tipoDocumento,setTipoDocumento,
-        //     documento,setDocumento,
-        //     nombres,setNombres,
-        //     apellidos, setApellidos,
-        //     fecha,setFecha,
-        //     profesion, setProfesion,
-        //     aspiracion,setAspiracion,
-        //     correo,setCorreo]= useState([])
-
+        // Configurar Hooks
+        const [tipoDocumento,setTipoDocumento]= useState([])
+        const [documento,setDocumento]= useState([])
+        const [nombres,setNombres]= useState([])
+        const [apellidos, setApellidos]= useState([])
+        const [fecha,setFecha]= useState([])
+        const [profesion, setProfesion]= useState([])
+        const [aspiracion,setAspiracion]= useState([])
+        const [correo,setCorreo]= useState([])
+    
         const navigate = useNavigate()
+        const {id} = useParams()
 
-        const usersCollection = collection (db, "users");
-
-        const listUser = async (e) => {
+        const update = async (e) => {
             e.preventDefault()
-            await addDoc(usersCollection, {TipoDocument: tipoDocumento, Documento: documento, Nombres: nombres, Apellidos: apellidos, Fecha: fecha, Profesion: profesion, Aspiracion: aspiracion, Correo: correo})
-            // await addDoc(usersCollection, {TipoDocument: tipoDocumento, Documento: documento, Nombres: nombres, Apellidos: apellidos, Fecha: fecha, Profesion: profesion, Aspiracion: aspiracion, Correo: correo})
-            // navigate('/src/components/Show')
+            const user = doc(db,"users", id)
+            const data = {TipoDocument: tipoDocumento, Documento: documento, Nombres: nombres, Apellidos: apellidos, Fecha: fecha, Profesion: profesion, Aspiracion: aspiracion, Correo: correo}
+            await updateDoc(user,data)
             navigate('../ModuleAspi')
         }
 
+        const getUserById = async (id)=>{
+            const user = await getDoc(doc(db,"users", id))
+            if(user.exists()){
+                setTipoDocumento(user.data().tipoDocument)
+                setDocumento(user.data().documento)
+                setNombres(user.data().nombres)
+                setApellidos(user.data().apellidos)
+                setCorreo(user.data().correo)
+                setFecha(user.data().fecha)
+                setProfesion(user.data().profesion)
+                setAspiracion(user.data().aspiracion)
+            }
+            // ?console.log(user.data())
+            else{
+                console.log('No existe')
+            }
+        }
+
+        useEffect( ()=>{
+            getUserById(id)
+        },[])
+    
+        // const usersCollection = collection (db, "users");
+    
+        // const listUser = async (e) => {
+        //     e.preventDefault()
+        //     await addDoc(usersCollection, {TipoDocument: tipoDocumento, Documento: documento, Nombres: nombres, Apellidos: apellidos, Fecha: fecha, Profesion: profesion, Aspiracion: aspiracion, Correo: correo})
+        //     navigate('../ModuleAspi')
+        //     }
+
     return (
         <>
-        <h2 className="title">Registrar Usuario</h2>
+        <h2 className="title">Editar Usuario</h2>
         <div className="main-container-2">
-            <form onSubmit={listUser}>
+            <form onSubmit={update}>
                 <div className="grid-form-container">
 
                     <div className="form-item">
                         <label>Tipo de documento:
-                            {/* <select value={Array.isArray(tipoDocumento) ? '' : tipoDocumento} onChange={(e)=>setTipoDocumento(e.target.value)} > */}
-                            {/* <select value={tipoDocumento} onChange={(e)=>setTipoDocumento(e.target.value)} > */}
-                                {/* <option value="cc">Cedula de ciudadania </option>
-                                <option value="ce">Cedula extranjera</option>
-                                <option value="p">Pasaporte</option>
-                                <option value="ti">Targeta de identidad </option>
-                            </select> */}
-
                             <select multiple value={tipoDocumento} onChange={(e) => setTipoDocumento(Array.from(e.target.selectedOptions, (option) => option.value))}>
                                 <option value="cc" >Cedula de ciudadania </option>
                                 <option value="ce">Cedula extranjera</option>
                                 <option value="p">Pasaporte</option>
                                 <option value="ti">Targeta de identidad </option>
                             </select>
-
 
                         </label>
                     </div>
@@ -101,7 +113,7 @@ const FormUserReg = () => {
 
                 </div>
                     <div className="form-item">
-                        <button className="button" type="submit">Subir Registro</button>
+                        <button className="button" type="submit">Editar Registro</button>
                     </div>
                 </form>
                     <div className="section-divider"></div>
@@ -110,4 +122,4 @@ const FormUserReg = () => {
     )
 }
 
-export default FormUserReg
+export default Edit

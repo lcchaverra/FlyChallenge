@@ -39,3 +39,12 @@
         overflow: hidden;
     }
 }
+
+.img-hover {
+    will-change: tranform, filter;
+    transition: transform .3s, filter .3s;
+    &:hover{
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 1rem var(--primary));
+    }
+}

@@ -5,6 +5,7 @@ import HomePage from './HomePage'
 import RegVaPage from './RegVaPage';
 import RegUserPage from './RegUserPage';
 import ModuleAspi from './ModuleAspi';
+import Edit from './components/Edit';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/ModuleAspi",
     element: <ModuleAspi/>
+  },
+  {
+    path: "/src/components/Edit/:id",
+    element: <Edit/>
   },
 ]);
 
