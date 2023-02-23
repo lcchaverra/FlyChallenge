@@ -3,8 +3,8 @@ import React from "react";
 const FormUserReg = () => {
     return (
         <>
-        <h2 className="title">Gestor de Vacantes</h2>
-        <div className="main-container">
+        <h2 className="title">Registrar Usuario</h2>
+        <div className="main-container-2">
             <form action="/">
                 <div className="grid-form-container">
 
@@ -53,7 +53,7 @@ const FormUserReg = () => {
                     </div>
                 </form>
                     <div className="section-divider"></div>
-            </div><br /><br /><br />
+            </div><br /><br /><br /><br />
         </>
     )
 }

@@ -9,9 +9,15 @@ const FormVacaOfert = () => {
                 <div className="grid-form-container">
 
                     <div className="form-item">
-                        <label htmlFor="name">Nombre</label>
+                        <label htmlFor="name">Codigo</label>
                         <input type="text" id="name" />
                     </div>
+
+                    <div className="form-item">
+                        <label htmlFor="name">Codigo</label>
+                        <input type="text" id="name" />
+                    </div>
+
                     <div className="form-item">
                         <label htmlFor="email">Correo</label>
                         <input type="email" id="email" />
