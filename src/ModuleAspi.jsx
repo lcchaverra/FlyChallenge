@@ -1,16 +1,16 @@
 import React from 'react'
-import Header from './components/Header'
-import FormAspi from './components/FormAspi'
+import AdminHeader from './components/AdminHeader'
+import DashHeader from './components/DashHeader'
 import { Show } from './components/Show'
-import MainFooter from './components/Footer'
 
 const ModuleAspi = () => {
   return (
     <>
-    <Header/>
-    <Show/>
-    {/* <FormAspi/> */}
-    <MainFooter/>
+    <AdminHeader/>
+      <div className="dashboard-container">
+        <DashHeader/>        
+        <Show/>
+      </div>
     </>
   )
 }

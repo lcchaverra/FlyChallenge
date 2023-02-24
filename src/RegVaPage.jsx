@@ -1,14 +1,16 @@
 import React from "react";
-import Header from './components/Header'
+import AdminHeader from './components/AdminHeader'
+import DashHeader from './components/DashHeader'
 import FormVacaOfert from './components/FormVacaOfert';
-import MainFooter from './components/Footer'
 
 const RegVaPage = () => {
     return (
         <>
-        <Header/>
-        <FormVacaOfert/>
-        <MainFooter/>
+        <AdminHeader/>
+            <div className="dashboard-container">
+            <DashHeader/>        
+            <FormVacaOfert/>
+            </div>
         </>
     )
 }

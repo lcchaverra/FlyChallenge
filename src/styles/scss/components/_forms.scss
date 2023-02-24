@@ -49,4 +49,18 @@
     } 
 }
 
+.form-container-styled {
+    height: 100%;
+    border-radius: 2rem;
+    margin: 0;
+    padding: 1rem 3rem;
+    color: var(--letter-color);
+    font-size: var(--h3-font-size);
+    @include rwd(l) {
+        padding: 1rem 3rem;
+        margin: 0 20rem;
+    }
+    background-color: var(--bg-color);
+    box-shadow: 1px 1px 2px $border-color;
+}
 

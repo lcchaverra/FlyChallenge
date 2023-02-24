@@ -8,6 +8,8 @@ import ModuleAspi from './ModuleAspi';
 import ModuleVaca from './ModuleVaca';
 import EditVaca from './components/EditVaca';
 import Edit from './components/Edit';
+import Login from './Login';
+import { Dashboard } from './Dashboard';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
   {
     path: "/src/components/EditVaca/:id",
     element: <EditVaca/>
+  },
+  {
+    path: "/Login",
+    element: <Login/>
+  },
+  {
+    path: "/Dashboard",
+    element: <Dashboard/>
   },
 ]);
 

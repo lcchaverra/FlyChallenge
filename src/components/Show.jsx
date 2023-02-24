@@ -63,7 +63,6 @@ export const Show = () => {
     }, [])
 
   return (
-    <div className="main-container">
     <div className='table-responsive'>
       <h2 className='title'>Modulo De Aspirantes</h2>
         <table className="table">
@@ -99,7 +98,6 @@ export const Show = () => {
             ))}
           </tbody>
         </table>
-    </div>
     </div>
   )
 }

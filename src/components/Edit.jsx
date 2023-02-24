@@ -58,14 +58,6 @@ const Edit = () => {
         useEffect( ()=>{
             getUserById(id)
         },[])
-    
-        // const usersCollection = collection (db, "users");
-    
-        // const listUser = async (e) => {
-        //     e.preventDefault()
-        //     await addDoc(usersCollection, {TipoDocument: tipoDocumento, Documento: documento, Nombres: nombres, Apellidos: apellidos, Fecha: fecha, Profesion: profesion, Aspiracion: aspiracion, Correo: correo})
-        //     navigate('../ModuleAspi')
-        //     }
 
     return (
         <>

@@ -422,6 +422,20 @@ h3 {
     overflow: hidden;
     height: 3.1rem; }
 
+.form-container-styled {
+  height: 100%;
+  border-radius: 2rem;
+  margin: 0;
+  padding: 1rem 3rem;
+  color: var(--letter-color);
+  font-size: var(--h3-font-size);
+  background-color: var(--bg-color);
+  box-shadow: 1px 1px 2px #CCC; }
+  @media screen and (min-width: 960px) {
+    .form-container-styled {
+      padding: 1rem 3rem;
+      margin: 0 20rem; } }
+
 .message {
   border: 3px solid #CCC;
   border-radius: 1rem;
@@ -482,6 +496,22 @@ td:hover {
     float: left;
     font-weight: bold;
     text-transform: uppercase; } }
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(2, 20% 80%);
+  background-color: var(--bg-color);
+  height: 100vh; }
+
+.admin-header {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  justify-content: space-between;
+  box-shadow: 4px 0px 5px #CCC; }
+  .admin-header ul, .admin-header li {
+    list-style: none; }
 
 .main-footer {
   position: fixed;

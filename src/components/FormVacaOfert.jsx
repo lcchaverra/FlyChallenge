@@ -30,13 +30,12 @@ const FormVacaOfert = () => {
                 showConfirmButton: false,
                 timer: 1500
             })
-            navigate('../ModuleVaca')
         }
 
     return (
         <>
-        <h2 className="title">Registro de Vacantes</h2>
         <div className="main-container">
+        <h2 className="title">Registro de Vacantes</h2>
             <form onSubmit={lisvacantes}>
                 <div className="grid-form-container">
 

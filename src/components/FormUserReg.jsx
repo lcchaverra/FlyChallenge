@@ -54,13 +54,6 @@ const FormUserReg = () => {
 
                     <div className="form-item">
                         <label>Tipo de documento:
-                            {/* <select value={Array.isArray(tipoDocumento) ? '' : tipoDocumento} onChange={(e)=>setTipoDocumento(e.target.value)} > */}
-                            {/* <select value={tipoDocumento} onChange={(e)=>setTipoDocumento(e.target.value)} > */}
-                                {/* <option value="cc">Cedula de ciudadania </option>
-                                <option value="ce">Cedula extranjera</option>
-                                <option value="p">Pasaporte</option>
-                                <option value="ti">Targeta de identidad </option>
-                            </select> */}
 
                             <select className='select' multiple value={tipoDocumento} onChange={(e) => setTipoDocumento(Array.from(e.target.selectedOptions, (option) => option.value))}>
                                 <option value="cc" >Cedula de ciudadania </option>

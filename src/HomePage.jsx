@@ -14,7 +14,6 @@ const HomePage = () => {
         <Group/>
         <Challenge/>
         <Features/>
-        {/* Seccion de Colaboradores, helppeople + RioSoftware */}
         <MainFooter/>  
         </>
     )

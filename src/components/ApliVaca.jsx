@@ -24,7 +24,7 @@ export const ApliVaca = () => {
 
   return (
     <div>
-        <div className="main-container">
+        {/* <div className="main-container"> */}
             <div className='table-responsive'>
                 <h2 className='title'>Aplicar vacantes</h2>
                     <table className="table">
@@ -59,7 +59,7 @@ export const ApliVaca = () => {
                         </tbody>
                     </table>
             </div>
-        </div>
+        {/* </div> */}
     </div>
   )
 }
