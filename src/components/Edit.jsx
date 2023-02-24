@@ -76,7 +76,7 @@ const Edit = () => {
 
                     <div className="form-item">
                         <label>Tipo de documento:
-                            <select multiple value={tipoDocumento} onChange={(e) => setTipoDocumento(Array.from(e.target.selectedOptions, (option) => option.value))}>
+                            <select disabled multiple value={tipoDocumento} onChange={(e) => setTipoDocumento(Array.from(e.target.selectedOptions, (option) => option.value))}>
                                 <option value="cc" >Cedula de ciudadania </option>
                                 <option value="ce">Cedula extranjera</option>
                                 <option value="p">Pasaporte</option>
@@ -88,7 +88,7 @@ const Edit = () => {
 
                     <div className="form-item">
                         <label >Cedula:</label>
-                        < input required maxLength="11" pattern='[0-9]+' value={documento} onChange={(e)=>setDocumento(e.target.value)} type="text"></input>
+                        < input disabled required maxLength="11" pattern='[0-9]+' value={documento} onChange={(e)=>setDocumento(e.target.value)} type="text"></input>
                     </div>
 
                     <div className="form-item">

@@ -6,6 +6,8 @@ import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { async } from '@firebase/util'
 
+
+
 // Funcion para eliminar documento
 const MySwall = withReactContent(Swal);
 
@@ -61,6 +63,7 @@ export const Show = () => {
     }, [])
 
   return (
+    <div className="main-container">
     <div className='table-responsive'>
       <h2 className='title'>Modulo De Aspirantes</h2>
         <table className="table">
@@ -96,6 +99,7 @@ export const Show = () => {
             ))}
           </tbody>
         </table>
+    </div>
     </div>
   )
 }

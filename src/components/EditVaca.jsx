@@ -59,18 +59,10 @@ const EditVaca = () => {
         useEffect( ()=>{
             getUserById(id)
         },[])
-    
-        // const usersCollection = collection (db, "users");
-    
-        // const listUser = async (e) => {
-        //     e.preventDefault()
-        //     await addDoc(usersCollection, {TipoDocument: tipoDocumento, Documento: documento, Nombres: nombres, Apellidos: apellidos, Fecha: fecha, Profesion: profesion, Aspiracion: aspiracion, Correo: correo})
-        //     navigate('../ModuleAspi')
-        //     }
 
         return (
             <>
-            <h2 className="title">Gestor de Vacantes</h2>
+            <h2 className="title">Edicion de Vacantes</h2>
             <div className="main-container">
                 <form onSubmit={update}>
                     <div className="grid-form-container">
@@ -113,7 +105,7 @@ const EditVaca = () => {
                         
                     </div>
                         <div className="form-item">
-                            <button className="button" type="submit">Registrar Vacante</button>
+                            <button className="button" type="submit">Modificar Vacante</button>
                         </div>
                     </form>
                         <div className="section-divider"></div>

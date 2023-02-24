@@ -35,7 +35,7 @@ const FormVacaOfert = () => {
 
     return (
         <>
-        <h2 className="title">Gestor de Vacantes</h2>
+        <h2 className="title">Registro de Vacantes</h2>
         <div className="main-container">
             <form onSubmit={lisvacantes}>
                 <div className="grid-form-container">

@@ -64,17 +64,16 @@ const FormUserReg = () => {
 
                             <select className='select' multiple value={tipoDocumento} onChange={(e) => setTipoDocumento(Array.from(e.target.selectedOptions, (option) => option.value))}>
                                 <option value="cc" >Cedula de ciudadania </option>
+                                <option value="ti">Targeta de identidad </option>
                                 <option value="ce">Cedula extranjera</option>
                                 <option value="p">Pasaporte</option>
-                                <option value="ti">Targeta de identidad </option>
                             </select>
-
 
                         </label>
                     </div>
 
                     <div className="form-item">
-                        <label >Cedula:</label>
+                        <label >Documento:</label>
                         < input required maxLength="11" pattern='[0-9]+' value={documento} onChange={(e)=>setDocumento(e.target.value)} type="text"></input>
                     </div>
 
@@ -89,7 +88,7 @@ const FormUserReg = () => {
                     </div>
 
                     <div className="form-item">
-                        <label>Fecha:</label>
+                        <label>Fecha de Nacimiento:</label>
                         <input required value={fecha} onChange={(e)=>setFecha(e.target.value)} type="date"></input>
                     </div>
 
@@ -104,13 +103,13 @@ const FormUserReg = () => {
                     </div>
 
                     <div className="form-item">
-                        <label>Correo:</label>
+                        <label>Correo Electrónico:</label>
                         <input required maxLength="60"  value={correo} onChange={(e)=>setCorreo(e.target.value)} type="email"></input>
                     </div>
 
                 </div>
                     <div className="form-item">
-                        <button className="button" type="submit">Subir Registro</button>
+                        <button className="button" type="submit">Cargar Registro</button>
                     </div>
                 </form>
                     <div className="section-divider"></div>

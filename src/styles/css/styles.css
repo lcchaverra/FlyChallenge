@@ -166,6 +166,12 @@ h3 {
   background-color: transparent;
   border: none; }
 
+.Button-Icon-2 {
+  color: var(--primary);
+  font-style: normal;
+  background-color: transparent;
+  border: none; }
+
 .main-section-banner {
   width: 100%;
   height: 15rem;
@@ -434,6 +440,7 @@ h3 {
   overflow-x: auto; }
 
 table {
+  font-size: var(--body-font-size);
   background-color: #f2f2f2;
   color: #333;
   border-collapse: collapse;
