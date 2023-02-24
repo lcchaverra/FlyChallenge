@@ -42,7 +42,7 @@ const FormUserReg = () => {
                 showConfirmButton: false,
                 timer: 1500
             })
-            navigate('../ModuleAspi')
+            navigate('/')
         }
 
     return (
