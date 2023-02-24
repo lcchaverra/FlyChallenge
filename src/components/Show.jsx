@@ -61,7 +61,7 @@ export const Show = () => {
     }, [])
 
   return (
-    <div>
+    <div className='table-responsive'>
       <h2 className='title'>Modulo De Aspirantes</h2>
         <table className="table">
           <thead>

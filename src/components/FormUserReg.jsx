@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import {collection, addDoc } from 'firebase/firestore'
 import { db } from '../firebaseConfig/firebase';
 import { async } from '@firebase/util'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 const FormUserReg = () => {
     // Configurar Hooks
@@ -33,6 +35,13 @@ const FormUserReg = () => {
             await addDoc(usersCollection, {TipoDocument: tipoDocumento, Documento: documento, Nombres: nombres, Apellidos: apellidos, Fecha: fecha, Profesion: profesion, Aspiracion: aspiracion, Correo: correo})
             // await addDoc(usersCollection, {TipoDocument: tipoDocumento, Documento: documento, Nombres: nombres, Apellidos: apellidos, Fecha: fecha, Profesion: profesion, Aspiracion: aspiracion, Correo: correo})
             // navigate('/src/components/Show')
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Sus datos se han registrado con exito',
+                showConfirmButton: false,
+                timer: 1500
+            })
             navigate('../ModuleAspi')
         }
 
@@ -53,7 +62,7 @@ const FormUserReg = () => {
                                 <option value="ti">Targeta de identidad </option>
                             </select> */}
 
-                            <select multiple value={tipoDocumento} onChange={(e) => setTipoDocumento(Array.from(e.target.selectedOptions, (option) => option.value))}>
+                            <select className='select' multiple value={tipoDocumento} onChange={(e) => setTipoDocumento(Array.from(e.target.selectedOptions, (option) => option.value))}>
                                 <option value="cc" >Cedula de ciudadania </option>
                                 <option value="ce">Cedula extranjera</option>
                                 <option value="p">Pasaporte</option>
@@ -71,12 +80,12 @@ const FormUserReg = () => {
 
                     <div className="form-item">
                         <label>Nombres:</label>
-                        <input required maxLength="32" pattern='[A-Z, a-z,ñ,á,é,í,ó,ú,ýÁ,É,Í,Ó,Ú,Ý]+' value={nombres} onChange={(e)=>setNombres(e.target.value)} type="text"></input>
+                        <input required maxLength="32" pattern='[A-Z, a-z,ñ,á,é,í,ó,ú,ý,Á,É,Í,Ó,Ú,Ý]+' value={nombres} onChange={(e)=>setNombres(e.target.value)} type="text"></input>
                     </div>
 
                     <div className="form-item">
                         <label>Apellidos:</label>
-                        <input required maxLength="32" pattern='[A-Z, a-z,ñ,á,é,í,ó,ú,ýÁ,É,Í,Ó,Ú,Ý]+' value={apellidos} onChange={(e)=>setApellidos(e.target.value)} type="text"></input>
+                        <input required maxLength="32" pattern='[A-Z, a-z,ñ,á,é,í,ó,ú,ý,Á,É,Í,Ó,Ú,Ý]+' value={apellidos} onChange={(e)=>setApellidos(e.target.value)} type="text"></input>
                     </div>
 
                     <div className="form-item">

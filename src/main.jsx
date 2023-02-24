@@ -5,16 +5,18 @@ import HomePage from './HomePage'
 import RegVaPage from './RegVaPage';
 import RegUserPage from './RegUserPage';
 import ModuleAspi from './ModuleAspi';
+import ModuleVaca from './ModuleVaca';
+import EditVaca from './components/EditVaca';
 import Edit from './components/Edit';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: <HomePage/>,
   },
   {
     path: "/RegVaPage",
-    element: <RegVaPage />,
+    element: <RegVaPage/>,
   },
   {
     path: "/RegUserPage",
@@ -25,8 +27,16 @@ const router = createBrowserRouter([
     element: <ModuleAspi/>
   },
   {
+    path: "/ModuleVaca",
+    element: <ModuleVaca/>
+  },
+  {
     path: "/src/components/Edit/:id",
     element: <Edit/>
+  },
+  {
+    path: "/src/components/EditVaca/:id",
+    element: <EditVaca/>
   },
 ]);
 

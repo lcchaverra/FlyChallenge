@@ -394,6 +394,8 @@ h3 {
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem; }
+  .form-item label {
+    font-size: var(--body-font-size); }
   .form-item input, .form-item select {
     width: 100%;
     padding: .5em;
@@ -408,6 +410,11 @@ h3 {
     width: 100%; }
   .form-item .Large-Imput {
     width: 100%; }
+  .form-item .select {
+    height: 3.1rem; }
+  .form-item .select-2 {
+    overflow: hidden;
+    height: 3.1rem; }
 
 .message {
   border: 3px solid #CCC;
@@ -422,6 +429,52 @@ h3 {
   to {
     color: var(--bg-color2);
     background-color: #CCC; } }
+
+.table-responsive {
+  overflow-x: auto; }
+
+table {
+  background-color: #f2f2f2;
+  color: #333;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left; }
+
+th {
+  background-color: #f2f2f2; }
+
+tr:hover {
+  background-color: #ddd; }
+
+td:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+
+@media screen and (max-width: 767px) {
+  table {
+    border: 0; }
+  table thead tr {
+    display: none; }
+  table tbody tr {
+    margin-bottom: 10px;
+    display: block;
+    border-bottom: 2px solid #ddd; }
+  table tbody td {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    border-bottom: 1px dotted #ccc; }
+  table tbody td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase; } }
 
 .main-footer {
   position: fixed;

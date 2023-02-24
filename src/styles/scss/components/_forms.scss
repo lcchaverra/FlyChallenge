@@ -13,8 +13,10 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 3rem;
-    // grid-column: span 1; // Asegura que cada elemento ocupe una sola columna
-    // grid-row: auto; // Coloca cada elemento en la siguiente fila disponible
+
+    & label {
+        font-size: var(--body-font-size);
+    }
     & input, select {
         width: 100%;
         padding: .5em;
@@ -35,4 +37,16 @@
     & .Large-Imput{
         width: 100%;
     }
+    & .select{
+        // overflow: hidden;
+        height: 3.1rem;
+        // background-color: aqua;
+    }
+
+    & .select-2{
+        overflow: hidden;
+        height: 3.1rem;
+    } 
 }
+
+

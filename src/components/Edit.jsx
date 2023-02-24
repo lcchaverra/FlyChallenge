@@ -3,6 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { collection ,getDoc, updateDoc, doc} from 'firebase/firestore'
 import { db } from '../firebaseConfig/firebase';
 import { async } from '@firebase/util'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 const Edit = () => {
 
@@ -24,6 +26,14 @@ const Edit = () => {
             const user = doc(db,"users", id)
             const data = {TipoDocument: tipoDocumento, Documento: documento, Nombres: nombres, Apellidos: apellidos, Fecha: fecha, Profesion: profesion, Aspiracion: aspiracion, Correo: correo}
             await updateDoc(user,data)
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Sus datos se han actualizado con exito',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
             navigate('../ModuleAspi')
         }
 
