@@ -1,6 +1,6 @@
 import React from 'react'
 import HelpIMG from '/src/img/helpblue.png'
-import RioImg from '/src/img/club.png'
+import RioImg from '/src/img/rio.png'
 
 const Features = () => {
   return (

@@ -30,14 +30,14 @@ const Edit = () => {
         const getUserById = async (id)=>{
             const user = await getDoc(doc(db,"users", id))
             if(user.exists()){
-                setTipoDocumento(user.data().tipoDocument)
-                setDocumento(user.data().documento)
-                setNombres(user.data().nombres)
-                setApellidos(user.data().apellidos)
-                setCorreo(user.data().correo)
-                setFecha(user.data().fecha)
-                setProfesion(user.data().profesion)
-                setAspiracion(user.data().aspiracion)
+                setTipoDocumento(user.data().TipoDocument)
+                setDocumento(user.data().Documento)
+                setNombres(user.data().Nombres)
+                setApellidos(user.data().Apellidos)
+                setCorreo(user.data().Correo)
+                setFecha(user.data().Fecha)
+                setProfesion(user.data().Profesion)
+                setAspiracion(user.data().Aspiracion)
             }
             // ?console.log(user.data())
             else{
