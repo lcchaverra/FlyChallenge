@@ -61,7 +61,7 @@ h3 {
 
 .main-container {
   height: 100%;
-  width: calc(100%-4rem);
+  width: calc(100% - 4rem);
   padding-top: 3rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -75,7 +75,7 @@ h3 {
 
 .main-container-2 {
   height: 100%;
-  width: calc(100%-4rem);
+  width: calc(100% - 4rem);
   padding: 1rem 2rem;
   color: var(--letter-color);
   font-size: var(--h3-font-size); }

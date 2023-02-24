@@ -3,7 +3,6 @@ import { auth } from './firebaseConfig/firebase';
 import { useNavigate, useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import HelpPeopleImg from '/src/img/helpblue.png';
-import BgImg from '/src/img/logbg.jpeg';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
